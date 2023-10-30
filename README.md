@@ -1,0 +1,1 @@
+A C++ Logger class with different priority levels and configuration to change it, and enabling file output
