@@ -50,11 +50,33 @@ class Logger{
             log("TRACE",TRACE, message, args...);
         }
 
-                
         //Logging for DEBUG level priority, takes a format string and a variable number of args using variadic template
         template<typename... Args>
         static void Debug(const char* message, Args... args){
             log("DEBUG", DEBUG, message, args...);    
+        }
+                
+        //Logging for INFO level priority, takes a format string and a variable number of args using variadic template
+        template<typename... Args>
+        static void Info(const char* message, Args... args){
+            log("Info", INFO, message, args...);    
+        }
+
+
+        //Logging for WARN level priority, takes a format string and a variable number of args using variadic template
+        template<typename... Args>
+        static void Warn(const char* message, Args... args){
+            log("WARN", WARN, message, args...);    
+        }
+        //Logging for ERROR level priority, takes a format string and a variable number of args using variadic template
+        template<typename... Args>
+        static void Error(const char* message, Args... args){
+            log("ERROR", ERROR, message, args...);    
+        }
+        //Logging for FATAL level priority, takes a format string and a variable number of args using variadic template
+        template<typename... Args>
+        static void Fatal(const char* message, Args... args){
+            log("FATAL", FATAL, message, args...);    
         }
 
     private:
